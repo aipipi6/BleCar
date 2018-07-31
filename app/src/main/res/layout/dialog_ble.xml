@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarHeight"
+            android:background="@color/toolbarBackgroundColor">
+
+            <com.freelink.library.widget.ImageTextView
+                android:id="@+id/itv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:drawablePadding="4dp"
+                android:text="返回"
+                android:textColor="@color/toolbarLeftColor"
+                android:textSize="14sp"
+                app:drawableLeft="@mipmap/back_black"
+                app:drawableSize="18dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="蓝牙设置"
+                android:textColor="@color/toolbarTitleColor"
+                android:textSize="@dimen/titleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spliteline"
+                android:layout_alignParentBottom="true"
+                android:background="@color/spliteline" />
+        </RelativeLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_toolbar"
+            app:srlAccentColor="#CCC"
+            app:srlPrimaryColor="#FAFAFA">
+
+            <com.freelink.blecar.ble.MyBezierRadarHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbars="vertical"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_loading"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/bg_toast"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <com.freelink.library.widget.loading.AVLoadingIndicatorView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:indicator_color="@color/white"
+                app:indicator="BallSpinFadeLoader"/>
+
+            <TextView
+                android:id="@+id/tv_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="正在加载"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
