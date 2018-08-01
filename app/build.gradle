@@ -34,6 +34,8 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.+'
     // 上拉下拉
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+
+    compile 'com.google.code.gson:gson:2.7'
     // 权限相关
     compile('com.github.hotchemi:permissionsdispatcher:3.1.0') {
         // if you don't use android.app.Fragment you can exclude support for them

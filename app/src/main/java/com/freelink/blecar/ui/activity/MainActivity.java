@@ -1,4 +1,4 @@
-package com.freelink.blecar;
+package com.freelink.blecar.ui.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.WindowManager;
 
-import com.freelink.blecar.ble.BleDialog;
+import com.freelink.blecar.App;
+import com.freelink.blecar.R;
+import com.freelink.blecar.ui.dialog.BleSetupDialog;
 import com.freelink.blecar.ble.BleService;
+import com.freelink.blecar.ui.dialog.RockerSetupDialog;
+import com.freelink.blecar.ui.dialog.SetupDialog;
 import com.freelink.library.base.BaseToolBarActivity;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseToolBarActivity {
@@ -44,8 +47,13 @@ public class MainActivity extends BaseToolBarActivity {
     };
 
 
-    @OnClick(R.id.button)
+    @OnClick(R.id.button1)
     public void onViewClicked() {
-        new BleDialog(context).show();
+        new BleSetupDialog(context).show();
+    }
+
+    @OnClick(R.id.button2)
+    public void onViewClicked2() {
+        new SetupDialog().show(getSupportFragmentManager(), "");
     }
 }

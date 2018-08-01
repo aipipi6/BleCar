@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="左摇杆"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="重力控制"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_left_rocker_gravity"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X轴锁定"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_left_rocker_lock_x"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y轴锁定"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_left_rocker_lock_y"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y轴回弹"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_left_rocker_recover_y"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="右摇杆"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重力控制"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_right_rocker_gravity"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X轴锁定"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_right_rocker_lock_x"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y轴锁定"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_right_rocker_lock_y"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spliteline"
+            android:background="@color/spliteline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y轴回弹"
+                android:textColor="#333"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <com.freelink.library.widget.SwitchButton
+                android:id="@+id/sbtn_right_rocker_recover_y"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.freelink.blecar.ble;
+package com.freelink.blecar.ui.dialog;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
@@ -19,6 +19,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.freelink.blecar.R;
+import com.freelink.blecar.ble.BleUtil;
 import com.freelink.blecar.ble.observer.BleConnectionObserver;
 import com.freelink.blecar.ble.observer.BleScanObserver;
 import com.freelink.library.dialog.BaseNormalDialog;
@@ -30,13 +31,11 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-
 /**
  * Created by chenjun on 2018/7/31.
  */
 
-public class BleDialog extends BaseNormalDialog {
+public class BleSetupDialog extends BaseNormalDialog {
 
     SmartRefreshLayout refreshLayout;
     RecyclerView recyclerView;
@@ -46,13 +45,13 @@ public class BleDialog extends BaseNormalDialog {
     private View loadingView;
     private TextView tvLoading;
 
-    public BleDialog(@NonNull Context context) {
+    public BleSetupDialog(@NonNull Context context) {
         super(context);
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dialog_ble;
+        return R.layout.dialog_ble_setup;
     }
 
     @Override
@@ -83,12 +82,6 @@ public class BleDialog extends BaseNormalDialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        findViewById(R.id.itv_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss();
-            }
-        });
         recyclerView = findViewById(R.id.recyclerView);
         refreshLayout = findViewById(R.id.refreshLayout);
 

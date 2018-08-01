@@ -17,19 +17,6 @@
             android:layout_height="@dimen/titleBarHeight"
             android:background="@color/toolbarBackgroundColor">
 
-            <com.freelink.library.widget.ImageTextView
-                android:id="@+id/itv_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="4dp"
-                android:drawablePadding="4dp"
-                android:text="返回"
-                android:textColor="@color/toolbarLeftColor"
-                android:textSize="14sp"
-                app:drawableLeft="@mipmap/back_black"
-                app:drawableSize="18dp" />
-
 
             <TextView
                 android:layout_width="wrap_content"
